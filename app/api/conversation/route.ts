@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     }
 
     if (!process.env.OPENAI_API_KEY) {
-      return new NextResponse("OpenAI API Key not configured", { status: 500 });
+      return new NextResponse("OpenAI API Key not configured", { status: 400 });
     }
 
     if (!messages) {
